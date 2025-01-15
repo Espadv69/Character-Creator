@@ -1,4 +1,11 @@
-.h1-menu-title {
+.menu {
+  min-height: 100dvh;
+
+  display: grid;
+  place-content: center;
+}
+
+.menu .h1-menu-title {
   font-family: 'Cinzel';
   text-align: center;
   text-transform: uppercase;
