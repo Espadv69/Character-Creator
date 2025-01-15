@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
 /* "IM Fell English*/
 *,
 *::before,
@@ -28,7 +29,7 @@ body {
     sans-serif;
 
   color: white;
-  background: linear-gradient(145deg, #4d4d4d, #686868, #7f7f7f, #595959);
+  background: linear-gradient(145deg, #4d4d4d, #4a4a4a, #3f3f3f, #353535);
   background-size: cover;
   overflow-y: hidden;
 }
@@ -44,11 +45,9 @@ body::before {
   right: 0;
   bottom: 0;
 
-  background: radial-gradient(
-      circle,
+  background: radial-gradient(circle,
       rgba(255, 255, 255, 0.05) 1%,
-      transparent 80%
-    ),
+      transparent 80%),
     radial-gradient(circle, rgba(0, 0, 0, 0.05) 1%, transparent 70%);
   background-size:
     50px 50px,
