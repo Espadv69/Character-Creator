@@ -8,12 +8,12 @@ export const Menu = () => {
       <h1 className="h1-menu-title">Character Creator</h1>
 
       <div className="container-buttons-menu">
-        <div className="button-menu">
-          <button>Create</button>
+        <div className="container-button-menu">
+          <button className="button-menu">Create</button>
         </div>
 
-        <div className="button-menu">
-          <button>Show</button>
+        <div className="container-button-menu">
+          <button className="button-menu">Show</button>
         </div>
       </div>
     </main>
