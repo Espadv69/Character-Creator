@@ -1,56 +1,80 @@
-/* Menú principal */
 .menu {
   min-height: 100dvh;
+
   display: grid;
   place-content: center;
 }
 
-/* Título del menú */
 .h1-menu-title {
   font-family: 'Cinzel', serif;
   font-size: 2.5rem;
-  text-align: center;
   color: #f0e6d2;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+
+  text-align: center;
   letter-spacing: 2px;
   margin-bottom: 20px;
   padding-bottom: 10px;
+
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-/* Contenedor de botones del menú */
 .container-buttons-menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
-/* Botón contenedor */
 .container-button-menu {
   width: 100%;
   height: 100px;
   padding: 0.4rem;
+
   display: flex;
   justify-content: center;
-  background: #272727;
+
+  background: #3befff4f;
   border-radius: 10px;
 }
 
-/* Botón */
 .button-menu {
   cursor: pointer;
+  position: relative;
+
   width: 100%;
   height: 100%;
+
   border: 2px solid #ffffff;
   border-radius: 10px;
-  font-size: 19px;
+  font-size: 22px;
   font-family: 'IM Fell English';
   color: #ffffff;
   background: transparent;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
+
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Efecto hover del botón */
+.button-menu::before {
+  content: '';
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: -100%;
+
+  border-radius: 100%;
+  background: #11588f;
+  z-index: -1;
+}
+
+.button-menu:hover::before {
+  top: 0;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+
 .button-menu:hover {
-  transform: scale(0.94);
+  transform: scale(0.97);
 }
