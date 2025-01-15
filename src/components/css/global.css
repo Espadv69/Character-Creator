@@ -29,7 +29,9 @@ body {
     sans-serif;
 
   color: white;
-  background: linear-gradient(145deg, #4d4d4d, #4a4a4a, #3f3f3f, #353535);
+
+  /* Fondo con tonos de azul */
+  background: linear-gradient(145deg, #3a6186, #2b5876, #243b55, #162534);
   background-size: cover;
   overflow-y: hidden;
 }
@@ -45,10 +47,11 @@ body::before {
   right: 0;
   bottom: 0;
 
+  /* Patrón de textura más claro */
   background: radial-gradient(circle,
-      rgba(255, 255, 255, 0.05) 1%,
-      transparent 80%),
-    radial-gradient(circle, rgba(0, 0, 0, 0.05) 1%, transparent 70%);
+      rgba(255, 255, 255, 0.08) 1%,
+      transparent 85%),
+    radial-gradient(circle, rgba(0, 0, 0, 0.05) 1%, transparent 75%);
   background-size:
     50px 50px,
     100px 100px;
