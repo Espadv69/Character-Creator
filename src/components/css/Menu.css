@@ -27,7 +27,7 @@
 .container-button-menu {
   width: 100%;
   height: 100px;
-  padding: 0.4rem;
+  padding: 0.3rem;
 
   display: flex;
   justify-content: center;
@@ -43,12 +43,13 @@
   width: 100%;
   height: 100%;
 
-  border: 2px solid #ffffff;
+  border: 4px solid #ffffff;
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 23px;
   font-family: 'IM Fell English';
   color: #ffffff;
-  background: transparent;
+
+  background: linear-gradient(145deg, #4ac9d6, #1a7b8f);
 
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -77,4 +78,7 @@
 
 .button-menu:hover {
   transform: scale(0.97);
+
+  background: linear-gradient(145deg, #2b8f9d, #0f5e70);
+  border-color: #ffffff;
 }
