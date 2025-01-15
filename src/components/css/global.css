@@ -9,6 +9,8 @@
 }
 
 body {
+  position: relative;
+
   min-height: 100dvh;
 
   font-family:
@@ -25,5 +27,45 @@ body {
     'Helvetica Neue',
     sans-serif;
 
+  color: white;
+  background: linear-gradient(145deg, #4d4d4d, #686868, #7f7f7f, #595959);
+  background-size: 200% 200%;
+
+  animation: gradientShift 12s ease-in-out infinite;
+
   overflow-y: hidden;
+}
+
+body::before {
+  content: '';
+
+  pointer-events: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 1%, transparent 80%),
+    radial-gradient(circle, rgba(0, 0, 0, 0.05) 1%, transparent 70%);
+  background-size: 50px 50px, 100px 100px;
+
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
