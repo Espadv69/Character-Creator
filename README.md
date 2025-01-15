@@ -38,5 +38,3 @@ This project is a **Character Creator** built using **Vite** and **React**. It a
 - Add more character classes.
 - Include a detailed view for individual characters.
 - Enable editing and deleting existing characters.
-
-Enjoy building and customizing your own characters!
