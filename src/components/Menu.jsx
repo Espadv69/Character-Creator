@@ -1,10 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-import { Create } from './Create.jsx'
 import './css/Menu.css'
+import { Create } from './Create'
 
 export const Menu = () => {
-  const [activeComponent, setActiveComponent] = useState('menu')
+  const [activeComponent, setActiveComponent] = useState(() => {
+    const savedComponent = localStorage.getItem('activeComponent')
+    return savedComponent ? savedComponent : 'menu'
+  })
+
+  useEffect(() => {
+    localStorage.setItem('activeComponent', activeComponent)
+  }, [activeComponent])
 
   return (
     <main className="menu">
@@ -34,7 +41,9 @@ export const Menu = () => {
         </>
       )}
 
-      {activeComponent === 'create' && <Create />}
+      {activeComponent === 'create' && (
+        <Create setActiveComponent={setActiveComponent} />
+      )}
     </main>
   )
 }
