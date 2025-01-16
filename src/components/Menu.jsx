@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import { Create } from './Create.jsx'
 import './css/Menu.css'
 
 export const Menu = () => {
@@ -13,15 +14,27 @@ export const Menu = () => {
 
           <div className="container-buttons-menu">
             <div className="container-button-menu">
-              <button className="button-menu">Create</button>
+              <button
+                className="button-menu"
+                onClick={() => setActiveComponent('create')}
+              >
+                Create
+              </button>
             </div>
 
             <div className="container-button-menu">
-              <button className="button-menu">Show</button>
+              <button
+                className="button-menu"
+                onClick={() => setActiveComponent('show')}
+              >
+                Show
+              </button>
             </div>
           </div>
         </>
       )}
+
+      {activeComponent === 'create' && <Create />}
     </main>
   )
 }
