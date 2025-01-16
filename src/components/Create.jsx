@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 
-export const Create = () => {
-  return <h1>Create</h1>
+export const Create = ({ setActiveComponent }) => {
+  return (
+    <div>
+      <button onClick={() => setActiveComponent('menu')}>back</button>
+    </div>
+  )
 }
