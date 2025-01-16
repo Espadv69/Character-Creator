@@ -48,9 +48,11 @@ body::before {
   bottom: 0;
 
   /* Patrón de textura más claro */
-  background: radial-gradient(circle,
+  background: radial-gradient(
+      circle,
       rgba(255, 255, 255, 0.08) 1%,
-      transparent 85%),
+      transparent 85%
+    ),
     radial-gradient(circle, rgba(0, 0, 0, 0.05) 1%, transparent 75%);
   background-size:
     50px 50px,
@@ -58,4 +60,8 @@ body::before {
 
   mix-blend-mode: overlay;
   z-index: 1;
+}
+
+.img-create {
+  width: 100px;
 }
