@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 
+import './css/Create.css'
 import MannequinImage from '../assets/mannequin.png'
-import GoblinImage from '../assets/goblin.png'
-import ElfImage from '../assets/elf.png'
 
 export const Create = ({ setActiveComponent }) => {
   const [name, setName] = useState('')
@@ -15,14 +14,13 @@ export const Create = ({ setActiveComponent }) => {
   }
 
   return (
-    <div>
-      <button onClick={() => setActiveComponent('menu')}>back</button>
-
-      <img className="img-create" src={setImage()} alt="" />
+    <div className="create">
+      <div>
+        <img className="img-create" src={setImage()} alt={classType} />
+      </div>
 
       <select value={classType} onChange={(e) => setClassType(e.target.value)}>
         <option value="mannequin">Mannequin</option>
-        <option value="goblin">Goblin</option>
       </select>
     </div>
   )
