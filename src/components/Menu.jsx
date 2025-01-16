@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 
-import './css/Menu.css'
 import { Create } from './Create'
+import { Show } from './Show'
+
+import './css/Menu.css'
 
 export const Menu = () => {
   const [activeComponent, setActiveComponent] = useState(() => {
@@ -43,6 +45,10 @@ export const Menu = () => {
 
       {activeComponent === 'create' && (
         <Create setActiveComponent={setActiveComponent} />
+      )}
+
+      {activeComponent === 'show' && (
+        <Show setActiveComponent={setActiveComponent} />
       )}
     </main>
   )
