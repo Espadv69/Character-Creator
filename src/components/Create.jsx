@@ -4,14 +4,33 @@ import './css/Create.css'
 import { imagesMapper } from '../utils/imageMapper.js'
 import { classDescriptions } from '../utils/classDescriptions.js'
 
+import Elf from '../classes/Elf.js'
+import Dwarf from '../classes/Dwarf.js'
+import Goblin from '../classes/Goblin.js'
+
 export const Create = ({ setActiveComponent }) => {
   const [name, setName] = useState('')
   const [classType, setClassType] = useState('mannequin')
+  const [character, setCharacter] = useState(null)
 
   const setImage = imagesMapper[classType] || imagesMapper.mannequin
 
   const setDescription =
     classDescriptions[classType] || classDescriptions.mannequin
+
+  const showCharacterStats = () => {
+    if (classType === 'elf') {
+      setCharacter(new Elf(name))
+    } else if (classType === 'dwarf') {
+      setCharacter(new Dwarf(name))
+    } else if (classType === 'goblin') {
+      setCharacter(new Goblin(name))
+    } else {
+      setCharacter(null)
+    }
+  }
+
+  const stats = character ? character.getStats() : null
 
   const namePlaceholder = () =>
     classType === 'mannequin'
@@ -26,7 +45,7 @@ export const Create = ({ setActiveComponent }) => {
         <p className="description-img-create">{setDescription}</p>
       </div>
 
-      <form className="form-create">
+      <form onSubmit={(e) => e.preventDefault()} className="form-create">
         <select
           className="select-create"
           value={classType}
@@ -50,6 +69,8 @@ export const Create = ({ setActiveComponent }) => {
           minLength={2}
         />
       </form>
+
+      {stats && <ul></ul>}
     </div>
   )
 }
