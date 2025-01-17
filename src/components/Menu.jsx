@@ -15,23 +15,19 @@ export const Menu = () => {
           <h1 className="h1-menu-title">Forge of Heroes</h1>
 
           <div className="container-buttons-menu">
-            <div className="container-button-menu">
-              <button
-                className="button-menu"
-                onClick={() => setActiveComponent('create')}
-              >
-                Create
-              </button>
-            </div>
+            <button
+              className="button-menu"
+              onClick={() => setActiveComponent('create')}
+            >
+              Create
+            </button>
 
-            <div className="container-button-menu">
-              <button
-                className="button-menu"
-                onClick={() => setActiveComponent('show')}
-              >
-                Show
-              </button>
-            </div>
+            <button
+              className="button-menu"
+              onClick={() => setActiveComponent('show')}
+            >
+              Show
+            </button>
           </div>
         </>
       )}
