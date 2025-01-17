@@ -45,14 +45,14 @@
 
   display: grid;
   grid-template-columns:
-    repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   justify-content: center;
   justify-items: center;
   gap: 10px;
 }
 
 .images-menu img {
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
