@@ -19,6 +19,11 @@ export const Create = ({ setActiveComponent }) => {
     return null
   }
 
+  const namePlaceholder = () => {
+    if (classType === 'mannequin') return 'First select a class'
+    return `Enter your ${classType}'s name`
+  }
+
   return (
     <div className="create">
       <button onClick={() => setActiveComponent('menu')}>Go back</button>
@@ -26,18 +31,27 @@ export const Create = ({ setActiveComponent }) => {
         <img className="img-create" src={setImage()} alt={classType} />
       </div>
 
-      <select
-        className="select-create"
-        value={classType}
-        onChange={(e) => setClassType(e.target.value)}
-      >
-        <option value="mannequin" disabled selected>
-          Choose a class
-        </option>
-        <option value="elf">Elf</option>
-        <option value="dwarf">Dwarf</option>
-        <option value="goblin">Goblin</option>
-      </select>
+      <form onSubmit="" className="form-create">
+        <select
+          className="select-create"
+          value={classType}
+          onChange={(e) => setClassType(e.target.value)}
+        >
+          <option value="mannequin" disabled selected>
+            Choose a class
+          </option>
+          <option value="elf">Elf</option>
+          <option value="dwarf">Dwarf</option>
+          <option value="goblin">Goblin</option>
+        </select>
+
+        <input
+          type="text"
+          className="input-form-create"
+          onChange=""
+          placeholder={namePlaceholder()}
+        />
+      </form>
     </div>
   )
 }
