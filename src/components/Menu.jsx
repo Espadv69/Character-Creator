@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Create } from './Create'
 import { Show } from './Show'
 
+import menuImage from '../assets/menu.png'
 import './css/Menu.css'
 
 export const Menu = () => {
@@ -28,6 +29,11 @@ export const Menu = () => {
             >
               Show
             </button>
+          </div>
+
+          <div className='images-menu'>
+            <img src={menuImage} alt='There is a montaine and a blue sky' />
+            <img src={menuImage} alt='There is a montaine and a blue sky' />
           </div>
         </>
       )}
