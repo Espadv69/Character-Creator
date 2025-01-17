@@ -21,8 +21,10 @@
 
   font-family: 'IM Fell English', serif;
 
-  overflow-y: scroll;
   background: #101010;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #090909 #101010;
 }
 
 .form-create {
