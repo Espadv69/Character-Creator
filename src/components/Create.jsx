@@ -8,8 +8,9 @@ export const Create = ({ setActiveComponent }) => {
   const [name, setName] = useState('')
   const [classType, setClassType] = useState('mannequin')
 
-  const setImage = () => imagesMapper[classType] || imagesMapper.mannequin
-  const setDescription = () =>
+  const setImage = imagesMapper[classType] || imagesMapper.mannequin
+
+  const setDescription =
     classDescriptions[classType] || classDescriptions.mannequin
 
   const namePlaceholder = () =>
@@ -21,11 +22,11 @@ export const Create = ({ setActiveComponent }) => {
     <div className="create">
       <button onClick={() => setActiveComponent('menu')}>Go back</button>
       <div className="container-img-create">
-        <img className="img-create" src={setImage()} alt={classType} />
-        <p className="description-img-create">{setDescription()}</p>
+        <img className="img-create" src={setImage} alt={classType} />
+        <p className="description-img-create">{setDescription}</p>
       </div>
 
-      <form  className="form-create">
+      <form className="form-create">
         <select
           className="select-create"
           value={classType}
