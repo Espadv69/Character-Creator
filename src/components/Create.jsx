@@ -1,19 +1,13 @@
 import { useState, useEffect } from 'react'
 
 import './css/Create.css'
-
+import { imagesMapper } from '../utils/imageMapper.js'
 
 export const Create = ({ setActiveComponent }) => {
   const [name, setName] = useState('')
   const [classType, setClassType] = useState('mannequin')
 
-  const setImage = () => {
-    if (classType === 'mannequin') return MannequinImage
-    if (classType === 'elf') return ElfImage
-    if (classType === 'dwarf') return DwarfImage
-    if (classType === 'goblin') return GoblinImage
-    return null
-  }
+  const setImage = () => imagesMapper[classType] || imagesMapper.mannequin
 
   const namePlaceholder = () => {
     if (classType === 'mannequin') return 'First select a class'
