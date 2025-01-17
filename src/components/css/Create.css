@@ -1,13 +1,28 @@
 .container-img-create {
   margin-top: 20px;
   margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 0.7rem;
 }
 
 .img-create {
   width: 120px;
   height: 120px;
+}
+
+.description-img-create {
+  max-height: 120px;
+  padding: 1rem;
+
+  font-family: 'IM Fell English', serif;
+
+  overflow-y: scroll;
+  background: #101010;
 }
 
 .form-create {
@@ -22,7 +37,7 @@
   width: 100%;
   max-width: 240px;
 
-  padding: .6rem;
+  padding: 0.6rem;
 
   border: none;
 
