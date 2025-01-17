@@ -5,6 +5,7 @@ import './css/Create.css'
 import MannequinImage from '../assets/mannequin.png'
 import ElfImage from '../assets/elf.png'
 import DwarfImage from '../assets/dwarf.png'
+import GoblinImage from '../assets/goblin.png'
 
 export const Create = ({ setActiveComponent }) => {
   const [name, setName] = useState('')
@@ -14,6 +15,7 @@ export const Create = ({ setActiveComponent }) => {
     if (classType === 'mannequin') return MannequinImage
     if (classType === 'elf') return ElfImage
     if (classType === 'dwarf') return DwarfImage
+    if (classType === 'goblin') return GoblinImage
     return null
   }
 
@@ -28,6 +30,7 @@ export const Create = ({ setActiveComponent }) => {
         <option value="mannequin">Mannequin</option>
         <option value="elf">Elf</option>
         <option value="dwarf">Dwarf</option>
+        <option value="goblin">Goblin</option>
       </select>
     </div>
   )
