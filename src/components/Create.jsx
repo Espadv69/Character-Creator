@@ -76,11 +76,11 @@ export const Create = ({ setActiveComponent }) => {
       </form>
 
       <div className="container-stats-create">
-        <h4>STATS</h4>
+        <h4 className="h4-stats-create">STATS</h4>
         {stats && (
           <div>
             <ul className="ul-create">
-              <li className="li-create">
+              <li className="li-create name">
                 <span>Name:</span> {stats.name}
               </li>
               <li className="li-create">
@@ -95,7 +95,7 @@ export const Create = ({ setActiveComponent }) => {
               <li className="li-create">
                 <span>Intelligence:</span> {stats.intelligence}
               </li>
-              <li className="li-create">
+              <li className="li-create weapon">
                 <span>Weapon:</span> {stats.weapon}
               </li>
             </ul>
