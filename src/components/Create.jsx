@@ -38,8 +38,10 @@ export const Create = ({ setActiveComponent }) => {
         <input
           type="text"
           className="input-form-create"
-          onChange=""
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           placeholder={namePlaceholder()}
+          disabled={classType === 'mannequin'}
         />
       </form>
     </div>
