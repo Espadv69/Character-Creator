@@ -2,12 +2,15 @@ import { useState, useEffect } from 'react'
 
 import './css/Create.css'
 import { imagesMapper } from '../utils/imageMapper.js'
+import { classDescriptions } from '../utils/classDescriptions.js'
 
 export const Create = ({ setActiveComponent }) => {
   const [name, setName] = useState('')
   const [classType, setClassType] = useState('mannequin')
 
   const setImage = () => imagesMapper[classType] || imagesMapper.mannequin
+  const setDescription = () =>
+    classDescriptions[classType] || classDescriptions.mannequin
 
   const namePlaceholder = () => {
     if (classType === 'mannequin') return 'First select a class'
@@ -19,6 +22,7 @@ export const Create = ({ setActiveComponent }) => {
       <button onClick={() => setActiveComponent('menu')}>Go back</button>
       <div className="container-img-create">
         <img className="img-create" src={setImage()} alt={classType} />
+        <p className="description-img-create">{setDescription()}</p>
       </div>
 
       <form onSubmit="" className="form-create">
