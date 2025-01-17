@@ -3,7 +3,12 @@ import { useState, useEffect } from 'react'
 export const Show = ({ setActiveComponent }) => {
   return (
     <div>
-      <button onClick={() => setActiveComponent('menu')}>back</button>
+      <button
+        className="button-go-back"
+        onClick={() => setActiveComponent('menu')}
+      >
+        Go Back
+      </button>
     </div>
   )
 }
