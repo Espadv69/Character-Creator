@@ -12,7 +12,7 @@ export const Menu = () => {
     <main className="menu">
       {activeComponent === 'menu' && (
         <>
-          <h1 className="h1-menu-title">Character Creator</h1>
+          <h1 className="h1-menu-title">Forge of Heroes</h1>
 
           <div className="container-buttons-menu">
             <div className="container-button-menu">
