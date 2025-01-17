@@ -26,4 +26,14 @@ export const classDescriptions = {
     unruly nature, they are clever and capable of outsmarting 
     even the most seasoned adventurers.
   `,
+  mage: `
+    Mages are masters of the arcane, wielding magic as their primary 
+    weapon. These scholarly individuals dedicate their lives to 
+    studying ancient texts and mastering powerful spells. With a vast 
+    understanding of the mystical arts, Mages can manipulate elements, 
+    summon creatures, and heal wounds. Though physically frail, they 
+    compensate with overwhelming magical power. Often solitary, Mages 
+    are driven by a thirst for knowledge and the pursuit of untapped 
+    magical potential.
+  `,
 }
