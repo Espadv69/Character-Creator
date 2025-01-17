@@ -22,12 +22,18 @@ export const Create = ({ setActiveComponent }) => {
   return (
     <div className="create">
       <button onClick={() => setActiveComponent('menu')}>Go back</button>
-      <div>
+      <div className="container-img-create">
         <img className="img-create" src={setImage()} alt={classType} />
       </div>
 
-      <select value={classType} onChange={(e) => setClassType(e.target.value)}>
-        <option value="mannequin">Mannequin</option>
+      <select
+        className="select-create"
+        value={classType}
+        onChange={(e) => setClassType(e.target.value)}
+      >
+        <option value="mannequin" disabled selected>
+          Choose a class
+        </option>
         <option value="elf">Elf</option>
         <option value="dwarf">Dwarf</option>
         <option value="goblin">Goblin</option>
