@@ -42,7 +42,7 @@
   max-width: 240px;
   padding: 0.6rem;
 
-  font-family: 'Cinzel', serif;
+  font-family: 'IM Fell English', serif;
 
   border: none;
 
@@ -82,7 +82,15 @@
   border: 1px solid whitesmoke;
 }
 
+.h4-stats-create {
+  text-align: center;
+  font-family: 'IM Fell English', serif;
+  color: turquoise;
+  border-bottom: 1px solid whitesmoke;
+}
+
 .ul-create {
+  margin-top: .7rem;
   list-style: none;
 
   font-family: 'Cinzel', serif;
@@ -92,7 +100,12 @@
   gap: 0.5rem;
 }
 
+.li-create.name,
+.li-create.weapon {
+  font-family: 'IM Fell English', serif;
+}
+
 .li-create span {
   color: turquoise;
-  font-family: 'IM Fell English';
+  font-family: 'IM Fell English', serif;
 }
