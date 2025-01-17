@@ -37,6 +37,10 @@ export const Create = ({ setActiveComponent }) => {
       ? 'First select a class'
       : `Enter your ${classType}'s name`
 
+  useEffect(() => {
+    showCharacterStats()
+  }, [classType, name])
+
   return (
     <div className="create">
       <button onClick={() => setActiveComponent('menu')}>Go back</button>
@@ -70,7 +74,19 @@ export const Create = ({ setActiveComponent }) => {
         />
       </form>
 
-      {stats && <ul></ul>}
+      {stats && (
+        <div>
+          <span className="span-name-create">Name: {stats.name}</span>
+
+          <ul className="ul-create">
+            <li className="li-create">Health: {stats.health}</li>
+            <li className="li-create">Strength: {stats.strength}</li>
+            <li className="li-create">Agility: {stats.agility}</li>
+            <li className="li-create">Intelligence: {stats.intelligence}</li>
+            <li className="li-create">Weapon: {stats.weapon}</li>
+          </ul>
+        </div>
+      )}
     </div>
   )
 }
