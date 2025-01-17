@@ -7,6 +7,7 @@ import { classDescriptions } from '../utils/classDescriptions.js'
 import Elf from '../classes/Elf.js'
 import Dwarf from '../classes/Dwarf.js'
 import Goblin from '../classes/Goblin.js'
+import Mage from '../classes/Mage.js'
 
 export const Create = ({ setActiveComponent }) => {
   const [name, setName] = useState('')
@@ -25,6 +26,8 @@ export const Create = ({ setActiveComponent }) => {
       setCharacter(new Dwarf(name))
     } else if (classType === 'goblin') {
       setCharacter(new Goblin(name))
+    } else if (classType === 'mage') {
+      setCharacter(new Mage(name))
     } else {
       setCharacter(null)
     }
@@ -61,6 +64,7 @@ export const Create = ({ setActiveComponent }) => {
           <option value="elf">Elf</option>
           <option value="dwarf">Dwarf</option>
           <option value="goblin">Goblin</option>
+          <option value="mage">Mage</option>
         </select>
 
         <input
