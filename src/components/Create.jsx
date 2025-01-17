@@ -71,22 +71,37 @@ export const Create = ({ setActiveComponent }) => {
           placeholder={namePlaceholder()}
           disabled={classType === 'mannequin'}
           minLength={2}
+          maxLength={13}
         />
       </form>
 
-      {stats && (
-        <div>
-          <span className="span-name-create">Name: {stats.name}</span>
-
-          <ul className="ul-create">
-            <li className="li-create">Health: {stats.health}</li>
-            <li className="li-create">Strength: {stats.strength}</li>
-            <li className="li-create">Agility: {stats.agility}</li>
-            <li className="li-create">Intelligence: {stats.intelligence}</li>
-            <li className="li-create">Weapon: {stats.weapon}</li>
-          </ul>
-        </div>
-      )}
+      <div className="container-stats-create">
+        <h4>STATS</h4>
+        {stats && (
+          <div>
+            <ul className="ul-create">
+              <li className="li-create">
+                <span>Name:</span> {stats.name}
+              </li>
+              <li className="li-create">
+                <span>Health:</span> {stats.health}
+              </li>
+              <li className="li-create">
+                <span>Strength:</span> {stats.strength}
+              </li>
+              <li className="li-create">
+                <span>Agility:</span> {stats.agility}
+              </li>
+              <li className="li-create">
+                <span>Intelligence:</span> {stats.intelligence}
+              </li>
+              <li className="li-create">
+                <span>Weapon:</span> {stats.weapon}
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
