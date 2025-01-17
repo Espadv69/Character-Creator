@@ -1,9 +1,8 @@
 export const classDescriptions = {
   mannequin: `
-    A neutral figure, perfect for starting your journey. 
-    The mannequin doesn't have specific traits, allowing you to 
-    fully customize its appearance, abilities, and skills. 
-    It's a blank canvas ready to become anything you imagine.
+    This placeholder represents an unselected class. 
+    Choose a class from the dropdown menu to see its details 
+    and begin customizing your character.
   `,
   elf: `
     Elves are graceful beings, deeply connected to nature. 
