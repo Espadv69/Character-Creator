@@ -20,17 +20,14 @@ export const Create = ({ setActiveComponent }) => {
     classDescriptions[classType] || classDescriptions.mannequin
 
   const showCharacterStats = () => {
-    if (classType === 'elf') {
-      setCharacter(new Elf(name))
-    } else if (classType === 'dwarf') {
-      setCharacter(new Dwarf(name))
-    } else if (classType === 'goblin') {
-      setCharacter(new Goblin(name))
-    } else if (classType === 'mage') {
-      setCharacter(new Mage(name))
-    } else {
-      setCharacter(null)
+    const classes = {
+      elf: Elf,
+      dwarf: Dwarf,
+      goblin: Goblin,
+      mage: Mage,
     }
+
+    setCharacter(classes[classType] ? new classes[classType](name) : null)
   }
 
   const stats = character ? character.getStats() : null
