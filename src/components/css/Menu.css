@@ -36,6 +36,14 @@
 
   color: whitesmoke;
   background: transparent;
+
+  transition: all .3s ease;
+}
+
+.button-menu:active,
+.button-menu:hover {
+  color: #121212;
+  background: whitesmoke;
 }
 
 .images-menu {
