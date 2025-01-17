@@ -42,6 +42,7 @@ export const Create = ({ setActiveComponent }) => {
           onChange={(e) => setName(e.target.value)}
           placeholder={namePlaceholder()}
           disabled={classType === 'mannequin'}
+          minLength={2}
         />
       </form>
     </div>
