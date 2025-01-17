@@ -43,7 +43,12 @@ export const Create = ({ setActiveComponent }) => {
 
   return (
     <div className="create">
-      <button onClick={() => setActiveComponent('menu')}>Go back</button>
+      <button
+        className="button-go-back"
+        onClick={() => setActiveComponent('menu')}
+      >
+        Go Back
+      </button>
       <div className="container-img-create">
         <img className="img-create" src={setImage} alt={classType} />
         <p className="description-img-create">{setDescription}</p>
