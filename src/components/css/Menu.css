@@ -4,3 +4,30 @@
   text-align: center;
   text-transform: uppercase;
 }
+
+.container-buttons-menu {
+  margin: 10px auto;
+  width: 100%;
+  max-width: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-menu {
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 24px;
+
+  width: 100%;
+  padding: 1.2rem;
+
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+
+  color: whitesmoke;
+  background: transparent;
+}
