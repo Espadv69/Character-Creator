@@ -4,6 +4,7 @@ import { Create } from './Create'
 import { Show } from './Show'
 
 import menuImage from '../assets/menu.png'
+import beachImage from '../assets/beach.png'
 import './css/Menu.css'
 
 export const Menu = () => {
@@ -31,9 +32,9 @@ export const Menu = () => {
             </button>
           </div>
 
-          <div className='images-menu'>
-            <img src={menuImage} alt='There is a montaine and a blue sky' />
-            <img src={menuImage} alt='There is a montaine and a blue sky' />
+          <div className="images-menu">
+            <img src={menuImage} alt="There is a montaine and a blue sky" />
+            <img src={beachImage} alt="There is a montaine and a blue sky" />
           </div>
         </>
       )}
