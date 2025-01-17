@@ -1,11 +1,13 @@
 .container-img-create {
-  margin-top: 20px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
   margin-bottom: 20px;
   padding: 1rem;
 
   display: grid;
   grid-template-columns: 120px 1fr;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   gap: 0.7rem;
 }
@@ -21,7 +23,7 @@
 
   font-family: 'IM Fell English', serif;
 
-  background: #101010;
+  background: #0c0c0c;
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: #090909 #101010;
@@ -38,8 +40,9 @@
 .input-form-create {
   width: 100%;
   max-width: 240px;
-
   padding: 0.6rem;
+
+  font-family: 'Cinzel', serif;
 
   border: none;
 
@@ -62,4 +65,34 @@
 
 .input-form-create::placeholder {
   color: rgba(245, 245, 245, 0.36);
+}
+
+.container-stats-create {
+  margin: 1rem auto;
+
+  width: 100%;
+  max-width: 220px;
+
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 1px solid whitesmoke;
+}
+
+.ul-create {
+  list-style: none;
+
+  font-family: 'Cinzel', serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.li-create span {
+  color: turquoise;
+  font-family: 'IM Fell English';
 }
