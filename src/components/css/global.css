@@ -14,3 +14,27 @@ body {
   color: whitesmoke;
   background-color: #121212;
 }
+
+.button-go-back {
+  cursor: pointer;
+
+  margin-top: 1rem;
+  padding: .8rem 2rem;
+
+  display: flex;
+  justify-self: center;
+
+  border: 1px solid turquoise;
+  border-radius: 5px;
+
+  font-family: 'IM Fell English', serif;
+
+  color: turquoise;
+  background: transparent;
+}
+
+.button-go-back:active,
+.button-go-back:hover {
+  color: #ffffff;
+  background: rgb(35, 122, 114);
+}
