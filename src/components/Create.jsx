@@ -12,10 +12,10 @@ export const Create = ({ setActiveComponent }) => {
   const setDescription = () =>
     classDescriptions[classType] || classDescriptions.mannequin
 
-  const namePlaceholder = () => {
-    if (classType === 'mannequin') return 'First select a class'
-    return `Enter your ${classType}'s name`
-  }
+  const namePlaceholder = () =>
+    classType === 'mannequin'
+      ? 'First select a class'
+      : `Enter your ${classType}'s name`
 
   return (
     <div className="create">
@@ -25,13 +25,13 @@ export const Create = ({ setActiveComponent }) => {
         <p className="description-img-create">{setDescription()}</p>
       </div>
 
-      <form onSubmit="" className="form-create">
+      <form  className="form-create">
         <select
           className="select-create"
           value={classType}
           onChange={(e) => setClassType(e.target.value)}
         >
-          <option value="mannequin" disabled selected>
+          <option value="mannequin" disabled>
             Choose a class
           </option>
           <option value="elf">Elf</option>
