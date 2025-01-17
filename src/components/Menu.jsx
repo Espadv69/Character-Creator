@@ -6,14 +6,7 @@ import { Show } from './Show'
 import './css/Menu.css'
 
 export const Menu = () => {
-  const [activeComponent, setActiveComponent] = useState(() => {
-    const savedComponent = localStorage.getItem('activeComponent')
-    return savedComponent ? savedComponent : 'menu'
-  })
-
-  useEffect(() => {
-    localStorage.setItem('activeComponent', activeComponent)
-  }, [activeComponent])
+  const [activeComponent, setActiveComponent] = useState('menu')
 
   return (
     <main className="menu">
