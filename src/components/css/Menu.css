@@ -1,8 +1,14 @@
 .h1-menu-title {
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+
   font-family: 'Cinzel', serif;
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
+
+  border-bottom: 1px solid whitesmoke;
 }
 
 .container-buttons-menu {
@@ -30,4 +36,23 @@
 
   color: whitesmoke;
   background: transparent;
+}
+
+.images-menu {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+}
+
+.images-menu img {
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
 }
