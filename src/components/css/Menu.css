@@ -37,7 +37,7 @@
   color: whitesmoke;
   background: transparent;
 
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .button-menu:active,
@@ -52,8 +52,7 @@
   max-width: 800px;
 
   display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   justify-content: center;
   justify-items: center;
   gap: 10px;
