@@ -25,7 +25,6 @@ This project is a **Character Creator** built using **Vite** and **React**. It a
 
 4. **Develop the Character Creation Interface**:
 
-   - Create a form for users to select a class and customize character attributes (e.g., name, stats).
    - Use the class constructors to instantiate new characters.
 
 5. **Implement the Character Viewer**:
@@ -36,10 +35,6 @@ This project is a **Character Creator** built using **Vite** and **React**. It a
 6. **Style the Application**:
 
    - Apply CSS for a user-friendly and responsive interface.
-
-7. **Test and Refine**:
-   - Test the app for bugs and ensure all features work as intended.
-   - Optimize for performance and usability.
 
 ## Future Enhancements
 
