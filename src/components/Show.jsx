@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 
+import './css/Show.css'
+
 export const Show = ({ setActiveComponent }) => {
   const [characters, setCharacters] = useState([])
 
