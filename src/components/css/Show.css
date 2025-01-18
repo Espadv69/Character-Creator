@@ -1,0 +1,33 @@
+.characters-list {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 500px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.character-card {
+  padding: .5rem;
+  width: 100%;
+  max-width: 220px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid white;
+
+  background: #016287;
+}
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  max-width: 100px;
+  max-height: 100px;
+}
