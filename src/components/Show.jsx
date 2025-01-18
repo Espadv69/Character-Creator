@@ -11,7 +11,7 @@ export const Show = ({ setActiveComponent }) => {
     }
 
     const confirmDelete = window.confirm(
-      'Are you sure you want to delete all characters?'
+      'Are you sure you want to delete all characters?',
     )
 
     if (confirmDelete) {
