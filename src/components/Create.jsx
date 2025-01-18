@@ -30,6 +30,21 @@ export const Create = ({ setActiveComponent }) => {
     setCharacter(classes[classType] ? new classes[classType](name) : null)
   }
 
+  const saveCharacter = () => {
+    if (!character) return
+
+    const savedCharacters = JSON.parse(localStorage.getItem('characters')) || []
+    const characterData = {
+      ...character.getStats(),
+      image: setImage,
+    }
+    savedCharacters.push(characterData)
+    localStorage.setItem('characters', JSON.stringify(savedCharacters))
+    setName('')
+    setClassType('mannequin')
+    alert('Character saved!')
+  }
+
   const stats = character ? character.getStats() : null
 
   const namePlaceholder = () =>
@@ -79,35 +94,43 @@ export const Create = ({ setActiveComponent }) => {
           minLength={2}
           maxLength={13}
         />
-      </form>
 
-      <div className="container-stats-create">
-        <h4 className="h4-stats-create">STATS</h4>
-        {stats && (
-          <div>
-            <ul className="ul-create">
-              <li className="li-create name">
-                <span>Name:</span> {stats.name}
-              </li>
-              <li className="li-create">
-                <span>Health:</span> {stats.health}
-              </li>
-              <li className="li-create">
-                <span>Strength:</span> {stats.strength}
-              </li>
-              <li className="li-create">
-                <span>Agility:</span> {stats.agility}
-              </li>
-              <li className="li-create">
-                <span>Intelligence:</span> {stats.intelligence}
-              </li>
-              <li className="li-create weapon">
-                <span>Weapon:</span> {stats.weapon}
-              </li>
-            </ul>
-          </div>
-        )}
-      </div>
+        <div className="container-stats-create">
+          <h4 className="h4-stats-create">STATS</h4>
+          {stats && (
+            <div>
+              <ul className="ul-create">
+                <li className="li-create name">
+                  <span>Name:</span> {stats.name}
+                </li>
+                <li className="li-create">
+                  <span>Health:</span> {stats.health}
+                </li>
+                <li className="li-create">
+                  <span>Strength:</span> {stats.strength}
+                </li>
+                <li className="li-create">
+                  <span>Agility:</span> {stats.agility}
+                </li>
+                <li className="li-create">
+                  <span>Intelligence:</span> {stats.intelligence}
+                </li>
+                <li className="li-create weapon">
+                  <span>Weapon:</span> {stats.weapon}
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
+
+        <button
+          className="button-go-back"
+          onClick={saveCharacter}
+          disabled={!name || classType === 'mannequin'}
+        >
+          Create
+        </button>
+      </form>
     </div>
   )
 }
