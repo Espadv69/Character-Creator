@@ -3,6 +3,21 @@ import { useState, useEffect } from 'react'
 export const Show = ({ setActiveComponent }) => {
   const [characters, setCharacters] = useState([])
 
+  const deleteAllCharacters = () => {
+    if (characters.length === 0) {
+      return
+    }
+
+    const confirmDelete = window.confirm(
+      'Are you sure you want to delete all characters?'
+    )
+
+    if (confirmDelete) {
+      localStorage.clear()
+      setCharacters([])
+    }
+  }
+
   useEffect(() => {
     const savedCharacters = JSON.parse(localStorage.getItem('characters')) || []
     setCharacters(savedCharacters)
@@ -39,6 +54,10 @@ export const Show = ({ setActiveComponent }) => {
           <p>No characters saved yet!</p>
         )}
       </div>
+
+      <button className="button-go-back" onClick={deleteAllCharacters}>
+        Delete all Characters
+      </button>
     </div>
   )
 }
