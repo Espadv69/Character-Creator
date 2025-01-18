@@ -58,6 +58,7 @@ export const Create = ({ setActiveComponent }) => {
 
   return (
     <div className="create">
+      <h1 className="h1-create-title">CHARACTER CREATE</h1>
       <button
         className="button-go-back"
         onClick={() => setActiveComponent('menu')}
