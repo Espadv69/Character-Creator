@@ -10,6 +10,7 @@ export const Show = ({ setActiveComponent }) => {
 
   return (
     <div className="show">
+      <h1 className="h1-show-title">Your Characters</h1>
       <button
         className="button-go-back"
         onClick={() => setActiveComponent('menu')}
@@ -17,7 +18,6 @@ export const Show = ({ setActiveComponent }) => {
         Go Back
       </button>
 
-      <h2>Your Characters</h2>
       <div className="characters-list">
         {characters.length > 0 ? (
           characters.map((char, index) => (
