@@ -38,3 +38,18 @@ body {
   color: #ffffff;
   background: rgb(35, 122, 114);
 }
+
+.h1-menu-title,
+.h1-create-title,
+.h1-show-title {
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid whitesmoke;
+}
